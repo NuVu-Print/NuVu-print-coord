@@ -1,0 +1,7 @@
+{
+  "name": "nuvu-print-coord",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "lodash": "^4.13.1"
+  }
+}

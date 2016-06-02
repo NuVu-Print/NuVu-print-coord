@@ -1,0 +1,14 @@
+@import "variables";
+
+.page-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.logotype-wrapper {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  background: $nuvu-pink;
+  padding-left: 25px;
+}

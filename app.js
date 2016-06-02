@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-var app = require('express')();
+var express = require('express');
+var app = express();
 var Queue = [1, 2];
 //use(siofu.router);
 var uuid = require('uuid');
@@ -9,10 +10,13 @@ var mkdirp = require('mkdirp');
 var exec = require("child_process").exec;
 var siofu = require("socketio-file-upload");
 var io = require('socket.io')(6969);
+
 app.set('view engine', 'pug');
 app.get('/', function(req, res) {
     res.render("index");
 })
+
+app.use('/www', express.static('www'))
 
 var uploader = new siofu();
 uploader.dir = "/path/to/save/uploads";
