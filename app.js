@@ -8,7 +8,7 @@ var fs = require('fs.extra');
 var mkdirp = require('mkdirp');
 var exec = require("child_process").exec;
 var siofu = require("socketio-file-upload");
-var io = require('socket.io')(80);
+var io = require('socket.io')(6969);
 app.set('view engine', 'pug');
 app.get('/', function(req, res) {
     res.render("index");
