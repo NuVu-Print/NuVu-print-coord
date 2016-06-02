@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var gulp = require('gulp')
 
 gulp.task('front-js', () => {
