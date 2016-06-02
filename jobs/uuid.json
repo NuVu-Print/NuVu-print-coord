@@ -1,0 +1,14 @@
+{
+  "name": "filament holder",
+  "student":"Stefano",
+  "phone-#":"+16171234567",
+  "uuid": "8723498727438987324987324798",
+  "stl":"uuid2",
+  "gcode":"uuid3",
+  "finished":"false",
+
+  "baseSettings": "high",
+  "customSettings": {
+
+  }
+}
