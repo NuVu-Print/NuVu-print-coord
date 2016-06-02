@@ -1,6 +1,15 @@
 #!/usr/bin/env node
 
 var gulp = require('gulp')
+var rename = require('gulp-rename')
+var sourcemaps = require('gulp-sourcemaps')
+var uglify = require('gulp-uglify')
+var include = require('gulp-include')
+var notify = require('gulp-notify')
+var sass = require('gulp-sass')
+var autoprefixer = require('gulp-autoprefixer')
+var cssnano = require('gulp-cssnano')
+var gulpBrowser = require('gulp-browser')
 
 gulp.task('front-js', () => {
   var stream = gulp.src('./www/js/scripts.js')
