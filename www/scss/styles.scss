@@ -1,8 +1,22 @@
 @import "variables";
 
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
 .page-wrapper {
   display: flex;
   flex-direction: row;
+}
+
+.add-pane {
+  flex-grow: 1;
+}
+
+.queue-pane {
+  flex-grow: 3;
+  width: 100%;
 }
 
 .logotype-wrapper {
@@ -11,4 +25,79 @@
   align-items: center;
   background: $nuvu-pink;
   padding-left: 25px;
+}
+
+.add-job-form-wrapper {
+  border-right: 3px solid $light-gray;
+}
+
+.add-job-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.add-job-row {
+  display: flex;
+  margin: 15px 0;
+}
+
+.add-job-text-label, .add-job-textfield {
+  height: 75px;
+}
+
+.add-job-text-label {
+  background: $nuvu-pink;
+  color: white;
+  height: 75px;
+  width: 165px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}
+
+.add-job-textfield {
+  transition: border 0.2s ease;
+  border: 3px solid $light-gray;
+  border-left: none;
+  font-size: 36px;
+  padding-left: 15px;
+  &:focus {
+    border-color: lighten($nuvu-pink, 10%);
+    outline: none;
+  }
+}
+
+.jobs-table {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.jobs-table {
+  font-size: 36px;
+  thead {
+    background: $nuvu-pink;
+    color: white;
+    letter-spacing: 9.89px;
+    tr {
+      height: 100px;
+    }
+  }
+  tbody {
+    tr {
+      height: 100px;
+      td .job-more-info {
+        font-size: 20px;
+      }
+      &:nth-child(odd) {
+        background: $faint-gray;
+      }
+    }
+  }
+  td {
+    padding: 5px 5px 5px 15px;
+  }
 }

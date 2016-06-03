@@ -2,6 +2,8 @@
   "name": "nuvu-print-coord",
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "lodash": "^4.13.1"
+    "lodash": "^4.13.1",
+    "font-awesome": "fontawesome#^4.6.3",
+    "select2": "^4.0.3"
   }
 }
