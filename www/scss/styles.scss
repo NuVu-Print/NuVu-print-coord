@@ -1,6 +1,6 @@
 @import "variables";
 
-body {
+html, body, .page-wrapper {
   font-family: "Lato", sans-serif;
   font-weight: 300;
 }
@@ -41,30 +41,34 @@ body {
 
 .add-job-row {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 15px 0;
 }
 
-.add-job-text-label, .add-job-textfield {
+.add-job-text-label, .add-job-textfield, .add-job-select-label, .add-job-select {
+  font-size: 36px;
   height: 75px;
 }
 
-.add-job-text-label {
+.add-job-text-label, .add-job-select-label {
   background: $nuvu-pink;
   color: white;
-  height: 75px;
   width: 165px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 36px;
 }
 
-.add-job-textfield {
+.add-job-textfield, .add-job-select {
   transition: border 0.2s ease;
   border: 3px solid $light-gray;
   border-left: none;
   font-size: 36px;
   padding-left: 15px;
+  border-radius: 0;
+  appearance: none;
+  width: 50%;
   &:focus {
     border-color: lighten($nuvu-pink, 10%);
     outline: none;
@@ -89,6 +93,7 @@ body {
   tbody {
     tr {
       height: 100px;
+      background: white;
       td .job-more-info {
         font-size: 20px;
       }

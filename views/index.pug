@@ -3,8 +3,9 @@ head
   meta(charset='utf-8')
   title NuVu Print
   link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:300,400,700', type='text/css')
-  link(rel='stylesheet', href='/www/bower_components/bootstrap/dist/css/bootstrap.min.css', media='screen' charset='utf-8')
+  link(rel='stylesheet', href='/www/bower_components/bootstrap/dist/css/bootstrap.min.css', media='screen', charset='utf-8')
   link(rel='stylesheet', href='/www/bower_components/font-awesome/css/font-awesome.min.css', media='screen')
+  link(rel='stylesheet', href='/www/bower_components/select2/dist/css/select2.min.css', media='screen')
   link(rel='stylesheet', href='/www/css/styles.min.css', media='screen', charset='utf-8')
 body
   .page-wrapper
@@ -16,11 +17,22 @@ body
       .add-job-form-wrapper
         form.add-job-form
           .add-job-row
-            span.add-job-text-label(autofocus="autofocus") Job
-            input.add-job-textfield.add-job-job(type="text", name="name")
+            span.add-job-text-label Job
+            input.add-job-textfield.add-job-job(type="text", name="job")
           .add-job-row
             span.add-job-text-label Name
             input.add-job-textfield.add-job-name(type="text", name="name")
+          .add-job-row
+            span.add-job-select-label Priority
+            select.add-job-select(name="priority")
+              option(disabled selected value)
+              option(value="5") Absolutely required
+              option(value="4") Urgent
+              option(value="3") Important
+              option(value="2") Normal
+              option(value="1") Low
+              option(value="0") Lunch/After NuVu
+
     .queue-pane
       table.jobs-table
         thead
