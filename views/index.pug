@@ -17,21 +17,29 @@ body
       .add-job-form-wrapper
         form.add-job-form
           .add-job-row
-            span.add-job-text-label Job
-            input.add-job-textfield.add-job-job(type="text", name="job")
+            label.add-job-text-label(for="add-job-job") Job
+            input.add-job-textfield#add-job-job(type="text", name="job")
           .add-job-row
-            span.add-job-text-label Name
-            input.add-job-textfield.add-job-name(type="text", name="name")
+            label.add-job-text-label(for="add-job-name") Name
+            input.add-job-textfield#add-job-name(type="text", name="name")
           .add-job-row
-            span.add-job-select-label Priority
-            select.add-job-select(name="priority")
-              option(disabled selected value)
+            label.add-job-select-label(for="add-job-priority") Priority
+            select.add-job-select#add-job-priority(name="priority")
               option(value="5") Absolutely required
               option(value="4") Urgent
               option(value="3") Important
-              option(value="2") Normal
+              option(value="2", selected) Normal
               option(value="1") Low
               option(value="0") Lunch/After NuVu
+          .add-job-row
+            label.add-job-select-label(for="add-job-quality") Quality
+            select.add-job-select#add-job-quality(name="quality")
+              option(disabled selected value)
+              option(value="4") High
+              option(value="3") Normal
+              option(value="2", selected) Speedy
+              option(value="1") Uber-fast
+              option(value="0") Custom
 
     .queue-pane
       table.jobs-table

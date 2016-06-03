@@ -40,6 +40,7 @@ html, body, .page-wrapper {
 }
 
 .add-job-row {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,6 +52,10 @@ html, body, .page-wrapper {
   height: 75px;
 }
 
+.add-job-text-label {
+  cursor: text;
+}
+
 .add-job-text-label, .add-job-select-label {
   background: $nuvu-pink;
   color: white;
@@ -58,17 +63,20 @@ html, body, .page-wrapper {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
+  font-weight: 300;
 }
 
 .add-job-textfield, .add-job-select {
   transition: border 0.2s ease;
   border: 3px solid $light-gray;
+  background: white;
   border-left: none;
   font-size: 36px;
   padding-left: 15px;
   border-radius: 0;
   appearance: none;
-  width: 50%;
+  width: 66%;
   &:focus {
     border-color: lighten($nuvu-pink, 10%);
     outline: none;
