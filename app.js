@@ -13,7 +13,71 @@ var io = require('socket.io')(6969);
 
 app.set('view engine', 'pug');
 app.get('/', function(req, res) {
-    res.render("index");
+    res.render("index", {
+      "queue": [
+        {
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "ETA": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        },
+      ]
+    });
 })
 
 app.use('/www', express.static('www'))

@@ -83,6 +83,19 @@ html, body, .page-wrapper {
   }
 }
 
+.slice-button {
+  @extend .add-job-text-label;
+  cursor: pointer;
+  border: 0;
+  &:hover, &:focus {
+    outline: none;
+    background: darken($nuvu-pink, 5%);
+  }
+  &:active {
+    background: darken($nuvu-pink, 35%);
+  }
+}
+
 .jobs-table {
   flex-grow: 1;
   width: 100%;

@@ -40,6 +40,9 @@ body
               option(value="2", selected) Speedy
               option(value="1") Uber-fast
               option(value="0") Custom
+          .add-job-row
+            button.slice-button(type="submit") SLICE
+
 
     .queue-pane
       table.jobs-table
@@ -49,59 +52,12 @@ body
             td NAME
             td ETA
         tbody
-          tr
-            td
-              i.fa.fa-info-circle.job-more-info
-              |  Knife
-            td Cruz, Ted
-            td 11:11
-          tr
-            td
-              i.fa.fa-info-circle.job-more-info
-              |  Knife
-            td Cruz, Ted
-            td 11:11
-          tr
-            td
-              i.fa.fa-info-circle.job-more-info
-              |  Knife
-            td Cruz, Ted
-            td 11:11
-          tr
-            td
-              i.fa.fa-info-circle.job-more-info
-              |  Knife
-            td Cruz, Ted
-            td 11:11
-          tr
-            td
-              i.fa.fa-info-circle.job-more-info
-              |  Knife
-            td Cruz, Ted
-            td 11:11
-          tr
-            td
-              i.fa.fa-info-circle.job-more-info
-              |  Knife
-            td Cruz, Ted
-            td 11:11
-          tr
-            td
-              i.fa.fa-info-circle.job-more-info
-              |  Knife
-            td Cruz, Ted
-            td 11:11
-          tr
-            td
-              i.fa.fa-info-circle.job-more-info
-              |  Knife
-            td Cruz, Ted
-            td 11:11
-          tr
-            td
-              i.fa.fa-info-circle.job-more-info
-              |  Knife
-            td Cruz, Ted
-            td 11:11
+          each job in queue
+            tr
+              td
+                i.fa.fa-info-circle.job-more-info
+                span= ' ' + job.job
+              td= job.name
+              td= job.eta
   script(src='/www/js-prod/libraries.min.js', charset='utf-8')
   script(src='/www/js-prod/scripts.min.js', charset='utf-8')
