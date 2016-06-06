@@ -13,7 +13,7 @@ body
       .logotype-wrapper
         img(src='/www/img/logotype.svg', alt='NuVu Print')
       .model-preview-wrapper
-        img(src='/www/img/model-placeholder.png', alt='Model Preview')
+        img.no-webgl-placeholder(src='/www/img/model-placeholder.png', alt='Model Preview')
       .add-job-form-wrapper
         form.add-job-form
           .add-job-row
@@ -48,14 +48,14 @@ body
             td JOB
             td NAME
             td ETA
-        tbody
+        tbody.jobs-tbody
           each job in queue
             tr
-              td
+              td.job-job-cell
                 i.fa.fa-info-circle.job-more-info
-                span= ' ' + job.job
-              td= job.name
-              td= job.eta
+                span(data-bind='job')= ' ' + job.job
+              td(data-bind='name').job-name-cell= job.name
+              td(data-bind='eta').job-eta-cell= job.eta
   script(src='/www/js-prod/libraries.min.js', charset='utf-8')
   script(src='/socket.io/socket.io.js')
   script(src='/www/js-prod/scripts.min.js', charset='utf-8')

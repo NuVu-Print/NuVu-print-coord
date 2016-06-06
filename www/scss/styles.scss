@@ -35,12 +35,22 @@ html, body, .page-wrapper {
   border-right: 3px solid $light-gray;
 }
 
+.model-preview-wrapper {
+  width: 38vw;
+  height: auto;
+}
+
+.no-webgl-placeholder {
+  width: 100%;
+}
+
 .add-job-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 15px;
+  padding-bottom: 100%;
 }
 
 .add-job-row {

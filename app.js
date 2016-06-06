@@ -1,82 +1,85 @@
 #!/usr/bin/env node
 
-var express = require('express');
-var app = express();
-var uuid = require('uuid');
-var fs = require('fs.extra');
-var mkdirp = require('mkdirp');
-var exec = require("child_process").exec;
-var server = require('http').Server(app);
-var io = require('socket.io')(server);
+const express = require('express');
+const app = express();
+const uuid = require('uuid');
+const fs = require('fs.extra');
+const mkdirp = require('mkdirp');
+const exec = require("child_process").exec;
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
+const time = require('english-time-mirror')
+const every = require('every-time-mirror')
+const msTime = require('ms-time')
 
-
+let queue = [
+  {
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Ethan",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  },{
+    "job": "Test job",
+    "name": "Sam",
+    "eta": "5:30"
+  }
+]
 
 app.set('view engine', 'pug');
 app.get('/', function(req, res) {
     res.render("index", {
-      "queue": [
-        {
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
-          "eta": "5:30"
-        }
-      ]
+      "queue": queue
     });
 })
 
@@ -88,6 +91,10 @@ server.listen(2001, () => {
 
 io.on('connection', (socket) => {
   console.log('New connection initiated')
+  socket.emit('displayQueue', queue)
+  let refresher = every('second', () => {
+    socket.emit('displayQueue', queue)
+  })
 })
 
 function upload(stl) {
