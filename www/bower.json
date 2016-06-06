@@ -4,6 +4,7 @@
     "bootstrap": "^3.3.6",
     "lodash": "^4.13.1",
     "font-awesome": "fontawesome#^4.6.3",
-    "select2": "^4.0.3"
+    "select2": "^4.0.3",
+    "socket.io": "^1.4.6"
   }
 }

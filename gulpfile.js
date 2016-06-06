@@ -14,7 +14,14 @@ const gulpBrowser = require('gulp-browser')
 gulp.task('front-js', () => {
   var stream = gulp.src('./www/js/scripts.js')
     .pipe(sourcemaps.init())
-    .pipe(gulpBrowser.browserify())
+    .pipe(gulpBrowser.browserify(
+      [
+        {
+          transform: 'babelify',
+          options: {presets: 'es2015'}
+        }
+      ]
+    ))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write())

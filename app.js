@@ -2,14 +2,14 @@
 
 var express = require('express');
 var app = express();
-var Queue = [1, 2];
-//use(siofu.router);
 var uuid = require('uuid');
 var fs = require('fs.extra');
 var mkdirp = require('mkdirp');
 var exec = require("child_process").exec;
-var siofu = require("socketio-file-upload");
-var io = require('socket.io')(6969);
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
+
 
 app.set('view engine', 'pug');
 app.get('/', function(req, res) {
@@ -82,12 +82,12 @@ app.get('/', function(req, res) {
 
 app.use('/www', express.static('www'))
 
-var uploader = new siofu();
-uploader.dir = "/path/to/save/uploads";
+server.listen(2001, () => {
+  console.log('3D printer station is listening on port 2001');
+})
 
-app.use(siofu.router)
-app.listen(2001, () => {
-    console.log('3D printer station is listening on port 2001');
+io.on('connection', (socket) => {
+  console.log('New connection initiated')
 })
 
 function upload(stl) {
@@ -108,13 +108,6 @@ function upload(stl) {
         }
     })
 }
-
-io.on("connection", function(socket) {
-    var uploader = new siofu();
-    uploader.dir = "/upload";
-    uploader.listen(socket);
-
-})
 
 function Slice(stl, Bsettings, Csettings) {
     exec("cd C:/Users/louieadamian/Documents/slic3r-mswin-x64-1-2-9a-stable/Slic3r\nslic3r-console.exe" + "Slic3r " + stlUUID + ".stl " + "--load " + Bsettings + Csettings, function(err) {
