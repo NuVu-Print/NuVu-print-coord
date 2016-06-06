@@ -34,7 +34,6 @@ body
           .add-job-row
             label.add-job-select-label(for="add-job-quality") Quality
             select.add-job-select#add-job-quality(name="quality")
-              option(disabled selected value)
               option(value="4") High
               option(value="3") Normal
               option(value="2", selected) Speedy
@@ -42,8 +41,6 @@ body
               option(value="0") Custom
           .add-job-row
             button.slice-button(type="submit") SLICE
-
-
     .queue-pane
       table.jobs-table
         thead

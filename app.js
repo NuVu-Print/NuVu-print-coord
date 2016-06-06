@@ -42,10 +42,6 @@ app.get('/', function(req, res) {
         },{
           "job": "Test job",
           "name": "Sam",
-          "ETA": "5:30"
-        },{
-          "job": "Test job",
-          "name": "Sam",
           "eta": "5:30"
         },{
           "job": "Test job",
@@ -75,7 +71,11 @@ app.get('/', function(req, res) {
           "job": "Test job",
           "name": "Sam",
           "eta": "5:30"
-        },
+        },{
+          "job": "Test job",
+          "name": "Sam",
+          "eta": "5:30"
+        }
       ]
     });
 })
