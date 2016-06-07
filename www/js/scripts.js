@@ -1,4 +1,4 @@
-const time = require('english-time-mirror')
+uconst time = require('english-time-mirror')
 const every = require('every-time-mirror')
 const msTime = require('ms-time')
 const submitJob = require('./_submitJob.js')
@@ -24,7 +24,11 @@ $(document).ready(() => {
   })
 
   let scene = new THREE.Scene()
-  let camera = new THREE.Persp
+  let camera = new THREE.PerspectiveCamera(75, 1.628, 0.1, 1000)
+  let renderer = new THREE.WebGLRenderer()
+
+  renderer.setSize((1.628 * window.innerWidth) / 2.63, window.innerWidth / 2.63)
+  $('.no-webgl-placeholder').after($(renderer.domElement).addClass('model-preview')).remove()
 
   $('.slice-button').click(() => {
     socket.emit('addJob', {
