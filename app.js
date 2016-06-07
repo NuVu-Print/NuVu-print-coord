@@ -14,63 +14,39 @@ const msTime = require('ms-time')
 
 let queue = [
   {
-    "job": "Test job",
+    "job": "Earplugs",
+    "name": "Lila",
+    "eta": "5:30"
+  },{
+    "job": "Mushroom",
     "name": "Sam",
     "eta": "5:30"
   },{
-    "job": "Test job",
-    "name": "Ethan",
+    "job": "Ladder model",
+    "name": "Myles",
     "eta": "5:30"
   },{
-    "job": "Test job",
-    "name": "Sam",
+    "job": "Flower",
+    "name": "Myles",
     "eta": "5:30"
   },{
-    "job": "Test job",
-    "name": "Sam",
+    "job": "Saeedcoins",
+    "name": "Saeed",
     "eta": "5:30"
   },{
-    "job": "Test job",
-    "name": "Sam",
+    "job": "Extra extruder cold end",
+    "name": "Stefano",
     "eta": "5:30"
   },{
-    "job": "Test job",
-    "name": "Sam",
+    "job": "Facemask",
+    "name": "Ian",
     "eta": "5:30"
   },{
-    "job": "Test job",
-    "name": "Sam",
+    "job": "iPhone servo case",
+    "name": "Micah",
     "eta": "5:30"
   },{
-    "job": "Test job",
-    "name": "Sam",
-    "eta": "5:30"
-  },{
-    "job": "Test job",
-    "name": "Sam",
-    "eta": "5:30"
-  },{
-    "job": "Test job",
-    "name": "Sam",
-    "eta": "5:30"
-  },{
-    "job": "Test job",
-    "name": "Sam",
-    "eta": "5:30"
-  },{
-    "job": "Test job",
-    "name": "Sam",
-    "eta": "5:30"
-  },{
-    "job": "Test job",
-    "name": "Sam",
-    "eta": "5:30"
-  },{
-    "job": "Test job",
-    "name": "Sam",
-    "eta": "5:30"
-  },{
-    "job": "Test job",
+    "job": "Robot base",
     "name": "Sam",
     "eta": "5:30"
   }
