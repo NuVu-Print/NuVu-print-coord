@@ -16,39 +16,35 @@ let queue = [
   {
     "job": "Earplugs",
     "name": "Lila",
-    "eta": "5:30"
+    "eta": "12:35"
   },{
     "job": "Mushroom",
     "name": "Sam",
-    "eta": "5:30"
+    "eta": "12:37"
   },{
     "job": "Ladder model",
     "name": "Myles",
-    "eta": "5:30"
+    "eta": "1:03"
   },{
     "job": "Flower",
     "name": "Myles",
-    "eta": "5:30"
-  },{
-    "job": "Saeedcoins",
-    "name": "Saeed",
-    "eta": "5:30"
+    "eta": "1:14"
   },{
     "job": "Extra extruder cold end",
     "name": "Stefano",
-    "eta": "5:30"
+    "eta": "1:53"
   },{
     "job": "Facemask",
     "name": "Ian",
-    "eta": "5:30"
+    "eta": "3:46"
   },{
     "job": "iPhone servo case",
     "name": "Micah",
-    "eta": "5:30"
+    "eta": "4:02"
   },{
     "job": "Robot base",
     "name": "Sam",
-    "eta": "5:30"
+    "eta": "4:20"
   }
 ]
 
