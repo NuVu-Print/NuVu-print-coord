@@ -64,8 +64,9 @@ server.listen(2001, () => {
 io.on('connection', (socket) => {
   console.log('New connection initiated')
   socket.emit('displayQueue', queue)
-  let refresher = every('second', () => {
-    socket.emit('displayQueue', queue)
+  socket.on('addJob', (data) => {
+    queue.push(data);
+    io.emit('displayQueue', queue);
   })
 })
 
