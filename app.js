@@ -8,7 +8,7 @@ var fs = require('fs.extra');
 var mkdirp = require('mkdirp');
 var exec = require("child_process").exec;
 var siofu = require("socketio-file-upload");
-var io = require('socket.io')(80);
+var io = require('socket.io')(2000);
 app.set('view engine', 'pug');
 app.get('/', function(req, res) {
     res.render("index");
@@ -49,7 +49,7 @@ io.on("connection", function(socket) {
 })
 
 function Slice(stl, Bsettings, Csettings) {
-    exec("cd C:/Users/louieadamian/Documents/slic3r-mswin-x64-1-2-9a-stable/Slic3r\nslic3r-console.exe" + "Slic3r " + stlUUID + ".stl " + "--load " + Bsettings + Csettings, function(err) {
+    exec("" + "Slic3r " + stlUUID + ".stl " + "--load " + Bsettings + Csettings, function(err) {
         if (err) {
             console.log(err);
         }
@@ -60,4 +60,7 @@ function Slice(stl, Bsettings, Csettings) {
 function priorityUtility(Importance, added, time, jobuuid) {
     var prio = (importace - added) / time;
     return jobuuid.prio;
+}
+function startJob() {
+
 }
