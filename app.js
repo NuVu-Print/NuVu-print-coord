@@ -71,9 +71,9 @@ io.on('connection', (socket) => {
 
 function upload(stl) {
     var path = __dirname + "/jobs/"
-    var stlUUID = uuid.v4();
-    var jobUUID = uuid.v4();
-    var gcodeUUID = uuid.v4();
+    var jobUUID = uuid.v4()
+    var stlUUID = jobUUID;
+    var gcodeUUID = jobUUID;
     var folder = path + jobUUID + '/'
     fs.mkdirs(folder, function(err) {
         if (err) {
@@ -81,15 +81,16 @@ function upload(stl) {
         }
     })
     var fileloc = folder.concat(stlUUID)
-    fs.copy(fileloc + ".stl", function(e) {
-        if (e) {
+    fs.copy(fileloc + ".stl", function(err) {
+        if (err) {
             console.log(e);
         }
     })
+    //slice(stlUUID,fast)
 }
 
-function Slice(stl, Bsettings, Csettings) {
-    exec("cd C:/Users/louieadamian/Documents/slic3r-mswin-x64-1-2-9a-stable/Slic3r\nslic3r-console.exe" + "Slic3r " + stlUUID + ".stl " + "--load " + Bsettings + Csettings, function(err) {
+function Slice(stlUUID, Bsettings, Csettings) {
+    exec("Slic3r " + stlUUID + ".stl " + "--load " + Bsettings + Csettings, function(err) {
         if (err) {
             console.log(err);
         }
