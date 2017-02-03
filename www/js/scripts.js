@@ -23,15 +23,16 @@ $(document).ready(() => {
     }
   })
 
-  let scene = new THREE.Scene()
-  let camera = new THREE.Persp
-
   $('.slice-button').click(() => {
     socket.emit('addJob', {
-      "job": $('#add-job-job'),
-      "name": $('#add-job-name'),
+      "job": $('#add-job-job').val(),
+      "name": $('#add-job-name').val(),
       "eta": "eta"
     })
+    return false
   })
+
+  let scene = new THREE.Scene()
+  let camera = new THREE.Persp
 
 })
