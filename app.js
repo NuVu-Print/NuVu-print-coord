@@ -1,7 +1,10 @@
 #!/usr/bin/env node
-
+var printers = [];
+var printer = {
+var bedSz = []; //xyz
+}
 var app = require('express')();
-var Queue = [1, 2];
+var Queue = [];
 //use(siofu.router);
 var uuid = require('uuid');
 var fs = require('fs.extra');
@@ -16,6 +19,8 @@ app.get('/', function(req, res) {
 
 var uploader = new siofu();
 uploader.dir = "/path/to/save/uploads";
+
+var queueTable= document.GetElemementById();
 
 app.use(siofu.router)
 app.listen(2001, () => {
@@ -39,6 +44,7 @@ function upload(stl) {
             console.log(e);
         }
     })
+
 }
 
 io.on("connection", function(socket) {
@@ -64,3 +70,9 @@ function priorityUtility(Importance, added, time, jobuuid) {
 function startJob() {
 
 }
+
+Function gcodeTime(){
+
+}
+
+

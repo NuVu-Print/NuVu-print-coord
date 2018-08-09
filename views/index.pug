@@ -13,9 +13,14 @@ body
           #viewer
           #settings-wrapper
               #job-field
+                input(type="text", name="jobName", placeholder="Job Name")
               #name-field
+                input(type="text", name="username", placeholder="name")
               #print-settings-feild
-              #slice-button
+                
+              #buttons 
+                button(name="slice",text="slice")
+                button(name="submit",text="submit")
 
       #table-wrapper
           table#queue
@@ -24,5 +29,5 @@ body
                   td job
                   td name
                   td eta
-              tbody
-                  tbody
+              tbody 
+                  
