@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-var printers = [];
-var printer = {
-var bedSz = []; //xyz
-}
-var app = require('express')();
-var Queue = [];
+
+const express = require('express');
+const app = express();
+
+app.use(express.static('www'));
+
+var Queue = [1, 2];
 //use(siofu.router);
 var uuid = require('uuid');
 var fs = require('fs.extra');
