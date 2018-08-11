@@ -1,0 +1,10 @@
+{
+  "makergear2":{
+    "process":"fdm",
+    "bedSz": [200, 250, 200],
+    "materials": ["PLA", "PETG", "TPE", "TPEE"]
+  },
+  "sindo":{
+
+  }
+}
