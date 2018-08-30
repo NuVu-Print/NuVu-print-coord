@@ -1,33 +1,28 @@
 head
-    title NuVu Print
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat", type="text/css")
-    meta(charset="utf-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+  link(rel='stylesheet', href='/css/styles.css', type="text/css")
+  link(rel='stylesheet', href='/css/index.css', type="text/css")
+  link(href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet")
+  meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
 body
-  #page-wrapper
-      #header-wrapper
-          #logotype-wrapper
-          img(src="/img/nuvu-logo.png", alt="nuvu logo")
-          h1 print
-      #slicer-wrapper
-          #viewer
-          #settings-wrapper
-              #job-field
-                input(type="text", name="jobName", placeholder="Job Name")
-              #name-field
-                input(type="text", name="username", placeholder="name")
-              #print-settings-feild
-                
-              #buttons 
-                button(name="slice",text="slice")
-                button(name="submit",text="submit")
+  .headerWrapper
+    h1 Queue
+  .queueWrappper
+    .printQueue
+      a.title(href='/lasercut') Laser Cut 
+      table.Queue
+        thead
+          tr
+            td Job
+            td Name
+            td Complete
+            td printer
+        tbody
 
-      #table-wrapper
-          table#queue
-              thead
-              tr
-                  td job
-                  td name
-                  td eta
-              tbody 
-                  
+    .cutQueue
+      a.title(href='/3dprint') 3D Print
+      table.Queue
+        thead
+          td Job
+          td Name
+          td Time
+        tbody

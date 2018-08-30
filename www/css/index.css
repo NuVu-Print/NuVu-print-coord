@@ -1,0 +1,12 @@
+body{
+  
+}
+.printQueue{
+  display: inline-block;
+}
+.cutQueue{
+  display: inline-block;
+}
+.title{
+  margin: auto;
+}

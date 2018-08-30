@@ -1,0 +1,30 @@
+head
+  title Queue 3D Print
+  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat", type="text/css")
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+body
+  .page-wrapper
+    .header-wrapper
+      h1 Queue 3D Print
+    .slicer-wrapper
+      .viewer
+      .settings-wrapper
+        .job-field
+          input(type="text", name="jobName", placeholder="Job Name")
+        .name-field
+          input(type="text", name="username", placeholder="name")
+        .print-settings-feild
+          
+        .buttons 
+          button(name="slice",text="slice")
+          button(name="submit",text="submit")
+          
+    .table-wrapper
+      table.queue
+        thead
+        tr
+          td job
+          td name
+          td eta
+        tbody 
