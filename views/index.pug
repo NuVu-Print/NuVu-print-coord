@@ -1,15 +1,27 @@
 head
+  title Queue
   link(rel='stylesheet', href='/css/styles.css', type="text/css")
   link(rel='stylesheet', href='/css/index.css', type="text/css")
-  link( href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet")
+  link( href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet")
   meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
 body
   .headerWrapper
     h1.title Queue
   .queueWrappper
-    .printQueue
+    .cutQueue
       a.title(href='/lasercut') Laser Cut 
-      table.Queue
+      table.queue
+        thead
+          td Job
+          td Name
+          td Start Time
+          td Time
+      
+        tbody
+
+    .printQueue
+      a.title(href='/3dprint') 3D Print
+      table.queue
         thead
           tr
             td Job
@@ -17,13 +29,8 @@ body
             td Complete
             td printer
         tbody
-
-    .cutQueue
-      a.title(href='/3dprint') 3D Print
-      table.Queue
-        thead
-          td Job
-          td Name
-          td Start Time
-          td Time
-        tbody
+          tr
+            td  MG2 fan mount
+            td Stefano
+            td 13:30
+            td MG2-a

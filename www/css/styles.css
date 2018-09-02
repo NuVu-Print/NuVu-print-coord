@@ -1,17 +1,23 @@
-.page-wrapper{
-  font-family: 'Raleway', sans-serif;
-  background-color: #ffffff;
+body{
+  font-family: Roboto, sans-serif;
+  background-color: #1c1c1c;
+}
+.title{
+  margin: 5%;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
 }
 .header-wrapper{
-  background-color: #F35D95;
   height 10%;
   width 100%
 
 }
-.logotype-wrapper{
 
-  color #ffffff;
-}
 .slicer-wrapper{
   width 33.33%;
+}
+:link{
+  color:#ffffff;
+
 }

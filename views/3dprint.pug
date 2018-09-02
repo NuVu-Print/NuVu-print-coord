@@ -1,30 +1,29 @@
 head
   title Queue 3D Print
-  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat", type="text/css")
   meta(charset="utf-8")
+  link( href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet")
+  link(rel='stylesheet', href='/css/styles.css', type="text/css")
+  link(rel='stylesheet', href='/css/3dprint.css', type="text/css")
   meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
 body
-  .page-wrapper
-    .header-wrapper
-      h1 Queue 3D Print
-    .slicer-wrapper
-      .viewer
-      .settings-wrapper
-        .job-field
-          input(type="text", name="jobName", placeholder="Job Name")
-        .name-field
-          input(type="text", name="username", placeholder="name")
-        .print-settings-feild
-          
-        .buttons 
-          button(name="slice",text="slice")
-          button(name="submit",text="submit")
-          
-    .table-wrapper
-      table.queue
-        thead
-        tr
-          td job
-          td name
-          td eta
-        tbody 
+  .headerWrapper
+    h1.title Queue 3D Print
+  .slicerWrapper
+    .viewer
+    .settingsWrapper
+      input.textInput(type="text", name="jobName", placeholder="Job Name")
+      input.textInput(type="text", name="username", placeholder="name")
+    .printSettingsFeild
+        button(name="advacedSettings", tex="Advaced Settings")
+    .buttons 
+      button(name="slice",text="slice")
+      button(name="submit",text="submit")
+        
+  .tableWrapper
+    table.queue
+      thead
+      tr
+        td job
+        td name
+        td eta
+      tbody 

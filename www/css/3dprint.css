@@ -1,0 +1,13 @@
+.slicerWrapper{
+  width: 33vw;
+  display: inline;
+}
+.tableWrapper{
+  display: inline;
+  float: left;
+}
+.textInput{
+  width: 90%;
+  padding: 5px;
+  border: 1px solid #000;
+}
