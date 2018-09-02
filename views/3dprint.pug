@@ -7,23 +7,23 @@ head
   meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
 body
   .headerWrapper
-    h1.title Queue 3D Print
+    h1.title Queue: 3D Print
   .slicerWrapper
     .viewer
     .settingsWrapper
       input.textInput(type="text", name="jobName", placeholder="Job Name")
       input.textInput(type="text", name="username", placeholder="name")
     .printSettingsFeild
-        button(name="advacedSettings", tex="Advaced Settings")
+      button.settingButton(name="advacedSettings") Advaced Settings
     .buttons 
-      button(name="slice",text="slice")
-      button(name="submit",text="submit")
+      button.settingButton(name="slice",) Slice
+      button.settingButton(name="submit") Submit
         
   .tableWrapper
     table.queue
       thead
-      tr
-        td job
-        td name
-        td eta
+        tr
+          td job
+          td name
+          td eta
       tbody 

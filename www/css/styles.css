@@ -21,3 +21,15 @@ body{
   color:#ffffff;
 
 }
+.queue{
+  width: 100%;
+}
+td{
+  vertical-align: middle;
+  width: 25%;
+  color: #ffffff;
+  text-align: center;
+}
+tbody td{
+  background-color: #3d3d3d;
+}

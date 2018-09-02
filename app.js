@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
   res.render("index");
 })
 app.get('/3dprint', (req, res) => res.render("3dprint"));
-app.get('/lasercut', (res, req) => res.render("lasercut"));
+app.get('/lasercut', (req, res) => res.render("lasercut"));
 var printjobs = fs.readJsonSync('printJobs.json', 'utf8');
 var uploader = new siofu();
 uploader.dir = "/path/to/save/uploads";

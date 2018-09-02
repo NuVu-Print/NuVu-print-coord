@@ -1,13 +1,25 @@
 .slicerWrapper{
   width: 33vw;
-  display: inline;
+  display: inline-block;
 }
 .tableWrapper{
   display: inline;
+  width: 66vw;
   float: left;
 }
 .textInput{
-  width: 90%;
-  padding: 5px;
-  border: 1px solid #000;
+  width: 100%;
+  margin: 3px;
+  border: 0px;
+  background-color: #3d3d3d;
+  color: #ffffff;
+}
+.settingButton{
+  font-family: Roboto, sans-serif;
+  width: 33%;
+  height: 3vh;
+  background-color: #3d3d3d;
+  border: 0;
+  margin: 3px;
+  color: #ffffff;
 }
