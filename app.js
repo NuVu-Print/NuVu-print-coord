@@ -21,7 +21,7 @@ app.get('/', function(req, res) {
 var uploader = new siofu();
 uploader.dir = "/path/to/save/uploads";
 var jobs;
-var queueTable= document.GetElemementById();
+var queueTable;
 
 app.use(siofu.router)
 app.listen(2001, () => {
